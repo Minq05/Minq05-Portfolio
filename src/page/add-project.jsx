@@ -9,7 +9,7 @@ function Add() {
   const { register, handleSubmit } = useForm();
   const onSubmit = async (data) => {
     try {
-      await axios.post("http://localhost:5000/projects", data);
+      await axios.post("http://localhost:3000/projects", data);
       toast.success("Project added successfully");
       nav("/projects");
     } catch (error) {

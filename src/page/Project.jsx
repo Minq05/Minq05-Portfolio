@@ -11,7 +11,7 @@ function Projects() {
   const [projects, setProjects] = useState([]);
   const getProjects = async () => {
     try {
-      const { data } = await axios.get("http://localhost:5000/projects");
+      const { data } = await axios.get("http://localhost:3000/projects");
       setProjects(data);
     } catch (error) {
       console.log(error);
@@ -21,7 +21,7 @@ function Projects() {
   const deleteId = async (id) => {
     if (confirm("Bạn có chắc chắn muốn xóa dự án này không?")) {
       try {
-        await axios.delete(`http://localhost:5000/projects/${id}`);
+        await axios.delete(`http://localhost:3000/projects/${id}`);
         getProjects();
       } catch (error) {
         console.log(error);
