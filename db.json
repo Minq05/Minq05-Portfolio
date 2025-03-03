@@ -1,0 +1,18 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "WEBSITE ĐẶT PHÒNG KHÁCH SẠN",
+      "description": "Website đặt phòng khách sạn sử dụng HTML, Tailwindcss, Javascript, PHP, MySQL",
+      "image": "src/img/khachSan.png",
+      "github": "https://github.com/Minq05/DatPhongKhachSan"
+    },
+    {
+      "id": 2,
+      "title": "WEBSITE THÔNG TIN CÁ NHÂN (PORTFOLIO)",
+      "description": "Website thông tin cá nhân (Portfolio) sử dụng HTML, Tailwindcss, Javascript, Reactjs",
+      "image": "src/img/portfolio.png",
+      "github": ""
+    }
+  ]
+}
