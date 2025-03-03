@@ -103,6 +103,13 @@ function Projects() {
                     >
                       DELETE
                     </motion.a>
+                    <motion.a
+                      href={`/edit/${project.id}`}
+                      className="text-gray-400 hover:underline cursor-pointer rounded-lg shadow-lg transition duration-300 border border-black p-1 pl-6 pr-6"
+                      whileHover={{ scale: 1.1 }}
+                    >
+                      EDIT
+                    </motion.a>
                   </motion.div>
                 </motion.div>
               </SwiperSlide>

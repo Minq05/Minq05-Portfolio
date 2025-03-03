@@ -27,6 +27,10 @@ const RoutesConfig = [
     element: <Edit />,
   },
   {
+    path: "/edit/:id",
+    element: <Edit />,
+  },
+  {
     path: "/contact",
     element: <Contact />,
   },

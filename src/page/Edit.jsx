@@ -1,14 +1,29 @@
 import axios from "axios";
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate, useParams } from "react-router";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
-import { useEffect } from "react";
 
 function Edit() {
   const { id } = useParams();
   const nav = useNavigate();
   const { register, handleSubmit, reset } = useForm();
+
+  useEffect(() => {
+    const fetchProject = async () => {
+      try {
+        const response = await axios.get(
+          `http://localhost:5000/projects/${id}`
+        );
+        reset(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchProject();
+  }, [id, reset]);
+
   const onSubmit = async (data) => {
     try {
       await axios.put(`http://localhost:5000/projects/${id}`, data);
@@ -19,19 +34,6 @@ function Edit() {
     }
   };
 
-  const getId = async (id) => {
-    try {
-      const { data } = await axios.put(`http://localhost:5000/projects/${id}`);
-      reset(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    if (!id) return;
-    getId(id);
-  }, [id]);
   return (
     <div className="min-h-screen p-6 flex flex-col items-center">
       <motion.div
@@ -41,7 +43,7 @@ function Edit() {
       >
         <div className=" bg-gray-800 p-8 rounded-xl shadow-lg max-w-lg w-500">
           <h1 className=" text-4xl font-serif font-extrabold text-white text-center mb-8">
-            Sửa dự án
+            Chỉnh sửa dự án
           </h1>
           <form
             onSubmit={handleSubmit(onSubmit)}
@@ -98,7 +100,7 @@ function Edit() {
               type="submit"
               className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 rounded-lg transition duration-300"
             >
-              Add Project
+              Update Project
             </button>
           </form>
         </div>
@@ -106,4 +108,5 @@ function Edit() {
     </div>
   );
 }
+
 export default Edit;
