@@ -32,7 +32,7 @@ function Projects() {
         transition={{ duration: 0.6 }}
       >
         <motion.h1
-          className="text-4xl font-extrabold text-white mb-8"
+          className="text-4xl font-extrabold text-white mb-8 font-serif"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}

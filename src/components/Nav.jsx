@@ -5,27 +5,41 @@ const Nav = () => {
     <nav className="w-full bg-gray-900 text-white p-4 flex justify-between items-center">
       <div className="flex items-center">
         <div>
-          <img src="src/img/logo.png" alt="Hình" className="w-20 h-20 my-2" />
+          <Link to="/" className="text-2xl font-extrabold font-serif">
+            My Portfolio
+          </Link>
         </div>
       </div>
-      <ul className="flex space-x-6">
+      <ul className="flex space-x-6 mr-6">
         <li>
-          <Link to="/" className="hover:text-blue-400">
+          <Link
+            to="/"
+            className="hover:text-blue-400 hover:font-extrabold font-serif"
+          >
             Home
           </Link>
         </li>
         <li>
-          <Link to="/projects" className="hover:text-blue-400">
+          <Link
+            to="/projects"
+            className="hover:text-blue-400 hover:font-extrabold font-serif"
+          >
             Projects
           </Link>
         </li>
         <li>
-          <Link to="/about" className="hover:text-blue-400">
+          <Link
+            to="/about"
+            className="hover:text-blue-400 hover:font-extrabold font-serif"
+          >
             About
           </Link>
         </li>
         <li>
-          <Link to="/contact" className="hover:text-blue-400">
+          <Link
+            to="/contact"
+            className="hover:text-blue-400 hover:font-extrabold font-serif"
+          >
             Contact
           </Link>
         </li>

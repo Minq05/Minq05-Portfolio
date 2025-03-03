@@ -4,6 +4,8 @@ import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 import Home from "./page/Home";
 import Projects from "./page/Project";
+import About from "./page/About";
+import Contact from "./page/Contact";
 
 const RoutesConfig = [
   {
@@ -13,6 +15,14 @@ const RoutesConfig = [
   {
     path: "/projects",
     element: <Projects />,
+  },
+  {
+    path: "/contact",
+    element: <Contact />,
+  },
+  {
+    path: "/about",
+    element: <About />,
   },
   {
     path: "/",
