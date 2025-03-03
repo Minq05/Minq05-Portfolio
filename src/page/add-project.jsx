@@ -17,7 +17,7 @@ function Add() {
     }
   };
   return (
-    <div className="min-h-screen bg-gray-900 p-6 flex flex-col items-center">
+    <div className="min-h-screen p-6 flex flex-col items-center">
       <motion.div
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}

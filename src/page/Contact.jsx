@@ -22,7 +22,7 @@ function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 p-6 flex flex-col items-center">
+    <div className="min-h-screen p-6 flex flex-col items-center">
       <h1 className="text-4xl font-extrabold font-serif text-white mb-8">
         Contact
       </h1>

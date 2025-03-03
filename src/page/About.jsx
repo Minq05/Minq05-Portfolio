@@ -8,7 +8,7 @@ const About = () => {
     AOS.init({ duration: 1000, once: true });
   }, []);
   return (
-    <div className="min-h-screen bg-gray-900 p-6 flex flex-col">
+    <div className="min-h-screen p-6 flex flex-col">
       <motion.div
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}

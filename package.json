@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.9",
+    "@uidotdev/usehooks": "^2.4.1",
     "aos": "^2.3.4",
     "axios": "^1.8.1",
     "framer-motion": "^12.4.7",

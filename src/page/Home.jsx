@@ -5,7 +5,7 @@ function Home() {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center h-screen bg-gray-900 p-6 text-center">
+    <div className="flex flex-col md:flex-row justify-center items-center h-screen p-6 text-center">
       <motion.div
         className="w-150 h-160 rounded-full overflow-hidden border-4 border-gray-700"
         initial={{ scale: 0.8, opacity: 0 }}

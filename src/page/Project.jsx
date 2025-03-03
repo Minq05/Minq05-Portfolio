@@ -33,7 +33,7 @@ function Projects() {
   }, []);
 
   return (
-    <div className="flex-col md:flex-row justify-center items-center h-screen bg-gray-900 p-6 text-center">
+    <div className="flex-col md:flex-row justify-center items-center h-screen p-6 text-center">
       <motion.div
         className="min-h-screen bg-gray-900 p-6 flex flex-col items-center"
         initial={{ scale: 0.8, opacity: 0 }}

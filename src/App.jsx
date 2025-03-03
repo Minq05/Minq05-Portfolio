@@ -37,7 +37,7 @@ const RoutesConfig = [
 function App() {
   const routes = useRoutes(RoutesConfig);
   return (
-    <div>
+    <div className="bg-gray-900">
       <Nav />
       {routes}
       <Footer />
