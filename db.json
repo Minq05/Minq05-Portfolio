@@ -4,15 +4,15 @@
       "id": "1",
       "title": "WEBSITE ĐẶT PHÒNG KHÁCH SẠN",
       "description": "Website đặt phòng khách sạn sử dụng HTML, Tailwindcss, Javascript, PHP, MySQL",
-      "image": "src/img/khachSan.png",
+      "image": "https://s3-alpha-sig.figma.com/img/fec4/edb6/e91f74f319db5134cad4b5f0f60c0dee?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=BgTJqRCmeHLQmNBX6PLkZBTZrEyqYCp2tBWgdoJLWGbjpdbKQW3JriqYBpINs0JC5TJSQB3OoxnwcGYP-X7j5uRlFFDh8oGGO~OYVuKu8hN24r32qD-plA6oFI2KneP5lribkuWJJ4XNAy8CpqRfwBjpDl0UyuG9JAjKgsMl1iRkF80hwnFmXGXMZOjFGAJY7SKqxePQpt-YP2s4sryDO9s2sVm50SbYY8rzJTyjPCOA63r79r1v9-M9XlpCLSv7CaQn4cphREpkvQFKwGU~0QKkg8~ZThPgElBqBIQe2PAFX5xPi0O2Sm4OFYTpEVQbQVWGsbxl1f0F9xYhUr99ZA__",
       "github": "https://github.com/Minq05/DatPhongKhachSan"
     },
     {
       "id": "2",
-      "title": "WEBSITE THÔNG TIN CÁ NHÂN (PORTFOLIO)",
-      "description": "Website thông tin cá nhân (Portfolio) sử dụng HTML, Tailwindcss, Javascript, Reactjs",
-      "image": "src/img/portfolio.png",
-      "github": "https://github.com/Minq05/Minq05-Portfolio"
+      "title": "WEBSITE PORTFOLIO",
+      "description": "Website portfolio cá nhân sử dụng HTML, Tailwindcss, Javascript, Reactjs và Vitejs",
+      "image": "https://s3-alpha-sig.figma.com/img/6e41/8aaa/703d539858487fdcd61577c45049227c?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=QtxUEPAvs-XcGV9X8mulAdj1wwMJnkxF9-gpI9gOLL43cGCEmObYugsWm2zfAB-jiOWRlnnSt6KroC3Jh3~IbtFPRYjopN392d~TgNBR0yfNV5WuFIlJkmJ~e8JF5ovdjk9U4trO3mkXHyweVw6hP33SSxL7unukijQwzGsMPoi8yKUkVRm8TtoT6~lhSyepyySVcPyGpkOFhwFUpinLabAJ-rHOCVgLrvVnYuxTNAH0iaNbVUzvuPz2mpi5QBsZMXHUY6wOkNhvKmzwdtyVf6GfSjTuEagqvcP~n78sJdCr0mLyGZpiG9xtArhueYl2VDp3eHNk1a3P52DmFx25bQ__",
+      "github": "https://github.com/Minq05/Portfolio"
     }
   ]
 }

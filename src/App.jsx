@@ -7,6 +7,7 @@ import Projects from "./page/Project";
 import About from "./page/About";
 import Contact from "./page/Contact";
 import Add from "./page/add-project";
+import Edit from "./page/Edit";
 
 const RoutesConfig = [
   {
@@ -20,6 +21,10 @@ const RoutesConfig = [
   {
     path: "/add",
     element: <Add />,
+  },
+  {
+    path: "/edit/:id",
+    element: <Edit />,
   },
   {
     path: "/contact",

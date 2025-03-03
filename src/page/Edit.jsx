@@ -1,21 +1,37 @@
 import axios from "axios";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
-function Add() {
+function Edit() {
+  const { id } = useParams();
   const nav = useNavigate();
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
   const onSubmit = async (data) => {
     try {
-      await axios.post("http://localhost:5000/projects", data);
-      toast.success("Project added successfully");
+      await axios.put(`http://localhost:5000/projects/${id}`, data);
+      toast.success("Project updated successfully");
       nav("/projects");
     } catch (error) {
       console.log(error);
     }
   };
+
+  const getId = async (id) => {
+    try {
+      const { data } = await axios.put(`http://localhost:5000/projects/${id}`);
+      reset(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    if (!id) return;
+    getId(id);
+  }, [id]);
   return (
     <div className="min-h-screen p-6 flex flex-col items-center">
       <motion.div
@@ -25,7 +41,7 @@ function Add() {
       >
         <div className=" bg-gray-800 p-8 rounded-xl shadow-lg max-w-lg w-500">
           <h1 className=" text-4xl font-serif font-extrabold text-white text-center mb-8">
-            Thêm dự án
+            Sửa dự án
           </h1>
           <form
             onSubmit={handleSubmit(onSubmit)}
@@ -90,4 +106,4 @@ function Add() {
     </div>
   );
 }
-export default Add;
+export default Edit;
