@@ -74,13 +74,11 @@ function Projects() {
                   whileHover={{ scale: 1.05 }}
                 >
                   <motion.div>
-                    <a href="https://minq05.netlify.app/" className="cursor-pointer">
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full h-40 object-cover rounded-md"
-                      />
-                    </a>
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-40 object-cover rounded-md"
+                    />
                   </motion.div>
                   <motion.div>
                     <h2 className="text-xl font-extrabold text-white mt-4">
