@@ -9,7 +9,6 @@ import axios from "axios";
 
 function Projects() {
   const [projects, setProjects] = useState([]);
-
   const getProjects = async () => {
     try {
       const { data } = await axios.get("http://localhost:5000/projects");
@@ -19,6 +18,16 @@ function Projects() {
     }
   };
 
+  const deleteId = async (id) => {
+    if (confirm("Bạn có chắc chắn muốn xóa dự án này không?")) {
+      try {
+        await axios.delete(`http://localhost:5000/projects/${id}`);
+        getProjects();
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  };
   useEffect(() => {
     getProjects();
   }, []);
@@ -82,16 +91,33 @@ function Projects() {
                   <motion.div className="mt-4 flex justify-center gap-4">
                     <motion.a
                       href={project.github}
-                      className="text-gray-400 hover:underline rounded-lg shadow-lg transition duration-300 border border-black p-1 pl-6 pr-6"
+                      className="text-gray-400 hover:underline cursor-pointer rounded-lg shadow-lg transition duration-300 border border-black p-1 pl-6 pr-6"
                       whileHover={{ scale: 1.1 }}
                     >
                       GitHub
+                    </motion.a>
+                    <motion.a
+                      onClick={() => deleteId(project.id)}
+                      className="text-gray-400 hover:underline cursor-pointer rounded-lg shadow-lg transition duration-300 border border-black p-1 pl-6 pr-6"
+                      whileHover={{ scale: 1.1 }}
+                    >
+                      DELETE
                     </motion.a>
                   </motion.div>
                 </motion.div>
               </SwiperSlide>
             ))}
         </Swiper>
+        <motion.p
+          className="mt-6 px-6 py-3 border-2 border-white rounded-lg text-white font-semibold transition-all transform hover:scale-110 float-left cursor-pointer"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <a href="/add">
+            <h1>Thêm dự án</h1>
+          </a>
+        </motion.p>
       </motion.div>
     </div>
   );
