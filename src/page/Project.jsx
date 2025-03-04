@@ -67,7 +67,7 @@ function Projects() {
             projects.map((project, index) => (
               <SwiperSlide key={index}>
                 <motion.div
-                  className="bg-gray-800 h-100 p-6"
+                  className="bg-gray-800 p-6"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.2 }}
@@ -86,7 +86,7 @@ function Projects() {
                     </h2>
                   </motion.div>
                   <motion.div>
-                    <p className="text-gray-400 mt-2">{project.description}</p>
+                    <p className="text-gray-400 mt-2 text-justify">{project.description}</p>
                   </motion.div>
                   <motion.div className="mt-4 flex justify-center gap-4">
                     <motion.a

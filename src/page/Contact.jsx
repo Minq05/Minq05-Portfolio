@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -23,73 +24,80 @@ function Contact() {
 
   return (
     <div className="min-h-screen p-6 flex flex-col items-center">
-      <h1 className="text-4xl font-extrabold font-serif text-white mb-8">
-        Contact
-      </h1>
-      <form
-        onSubmit={handleSubmit}
-        className="bg-gray-800 p-6 rounded-lg shadow-md w-full max-w-md"
+      <motion.div
+        className="min-h-screen bg-gray-900 p-6 flex flex-col items-center"
+        initial={{ scale: 0.8, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 0.6 }}
       >
-        <div className="mb-4">
-          <label
-            className="block text-white text-sm font-bold mb-2"
-            htmlFor="name"
-          >
-            Name
-          </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline hover:border-blue-500"
-            required
-          />
-        </div>
-        <div className="mb-4">
-          <label
-            className="block text-white text-sm font-bold mb-2"
-            htmlFor="email"
-          >
-            Email
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline hover:border-blue-500"
-            required
-          />
-        </div>
-        <div className="mb-4">
-          <label
-            className="block text-white text-sm font-bold mb-2"
-            htmlFor="message"
-          >
-            Message
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline hover:border-blue-500"
-            rows="4"
-            required
-          ></textarea>
-        </div>
-        <div className="flex items-center justify-between">
-          <button
-            type="submit"
-            className="bg-black hover:bg-gray-700 cursor-pointer text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline"
-          >
-            Send
-          </button>
-        </div>
-      </form>
+        <h1 className="text-4xl font-extrabold font-serif text-white mb-8">
+          Contact
+        </h1>
+        <form
+          onSubmit={handleSubmit}
+          className="bg-gray-800 p-6 w-400 rounded-lg shadow-md max-w-md"
+        >
+          <div className="mb-4">
+            <label
+              className="block text-white text-sm font-bold mb-2"
+              htmlFor="name"
+            >
+              Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline hover:border-blue-500"
+              required
+            />
+          </div>
+          <div className="mb-4">
+            <label
+              className="block text-white text-sm font-bold mb-2"
+              htmlFor="email"
+            >
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline hover:border-blue-500"
+              required
+            />
+          </div>
+          <div className="mb-4">
+            <label
+              className="block text-white text-sm font-bold mb-2"
+              htmlFor="message"
+            >
+              Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline hover:border-blue-500"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+          <div className="flex items-center justify-between">
+            <button
+              type="submit"
+              className="bg-black hover:bg-gray-700 cursor-pointer text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline"
+            >
+              Send
+            </button>
+          </div>
+        </form>
+      </motion.div>
     </div>
   );
 }
