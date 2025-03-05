@@ -14,7 +14,7 @@ function Edit() {
     const fetchProject = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/projects/${id}`
+          `https://minq05-portfolio.onrender.com/projects/${id}`
         );
         reset(response.data);
       } catch (error) {
@@ -26,7 +26,7 @@ function Edit() {
 
   const onSubmit = async (data) => {
     try {
-      await axios.put(`http://localhost:3000/projects/${id}`, data);
+      await axios.put(`https://minq05-portfolio.onrender.com/projects/${id}`, data);
       toast.success("Project updated successfully");
       nav("/projects");
     } catch (error) {
