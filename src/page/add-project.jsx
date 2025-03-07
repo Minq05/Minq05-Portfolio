@@ -23,7 +23,7 @@ function Add() {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.6 }}
       >
-        <div className=" bg-gray-800 p-8 rounded-xl shadow-lg max-w-lg w-500">
+        <div className=" bg-gray-800 p-10 rounded-xl shadow-lg max-w-lg w-auto">
           <h1 className=" text-4xl font-serif font-extrabold text-white text-center mb-8">
             Thêm dự án
           </h1>
@@ -31,7 +31,7 @@ function Add() {
             onSubmit={handleSubmit(onSubmit)}
             action="#"
             method="POST"
-            className="space-y-4"
+            className="space-y-4 w-96"
           >
             <div>
               <label className="block text-white font-medium mb-2">

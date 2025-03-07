@@ -26,7 +26,10 @@ function Edit() {
 
   const onSubmit = async (data) => {
     try {
-      await axios.put(`https://minq05-portfolio.onrender.com/projects/${id}`, data);
+      await axios.put(
+        `https://minq05-portfolio.onrender.com/projects/${id}`,
+        data
+      );
       toast.success("Project updated successfully");
       nav("/projects");
     } catch (error) {
@@ -41,7 +44,7 @@ function Edit() {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.6 }}
       >
-        <div className=" bg-gray-800 p-8 rounded-xl shadow-lg max-w-lg w-500">
+        <div className=" bg-gray-800 p-10 rounded-xl shadow-lg max-w-lg w-auto">
           <h1 className=" text-4xl font-serif font-extrabold text-white text-center mb-8">
             Chỉnh sửa dự án
           </h1>
@@ -49,7 +52,7 @@ function Edit() {
             onSubmit={handleSubmit(onSubmit)}
             action="#"
             method="POST"
-            className="space-y-4"
+            className="space-y-4 w-96"
           >
             <div>
               <label className="block text-white font-medium mb-2">
