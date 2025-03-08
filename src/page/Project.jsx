@@ -6,28 +6,43 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
+import useAuth from "../context/AuthContext";
+import { useNavigate } from "react-router";
 
 function Projects() {
+  const nav = useNavigate();
   const [projects, setProjects] = useState([]);
+  const { user } = useAuth();
   const getProjects = async () => {
     try {
-      const { data } = await axios.get("https://minq05-portfolio.onrender.com/projects");
+      const { data } = await axios.get(
+        "https://minq05-portfolio.onrender.com/projects"
+      );
       setProjects(data);
     } catch (error) {
       console.log(error);
     }
   };
 
-  const deleteId = async (id) => {
-    if (confirm("Bạn có chắc chắn muốn xóa dự án này không?")) {
-      try {
-        await axios.delete(`https://minq05-portfolio.onrender.com/projects/${id}`);
-        getProjects();
-      } catch (error) {
-        console.log(error);
+  const handleDelete = async (id) => {
+    if (!user || user.username !== "minq05") {
+      alert("Bạn không có quyền xóa dự án! Hãy đăng nhập !");
+      nav("/login");
+      return;
+    } else {
+      if (confirm("Bạn có chắc chắn muốn xóa dự án này không?")) {
+        try {
+          await axios.delete(
+            `https://minq05-portfolio.onrender.com/projects/${id}`
+          );
+          getProjects();
+        } catch (error) {
+          console.log(error);
+        }
       }
     }
   };
+
   useEffect(() => {
     getProjects();
   }, []);
@@ -86,7 +101,9 @@ function Projects() {
                     </h2>
                   </motion.div>
                   <motion.div>
-                    <p className="text-gray-400 mt-2 text-justify">{project.description}</p>
+                    <p className="text-gray-400 mt-2 text-justify">
+                      {project.description}
+                    </p>
                   </motion.div>
                   <motion.div className="mt-4 flex justify-center gap-4">
                     <motion.a
@@ -96,13 +113,15 @@ function Projects() {
                     >
                       GitHub
                     </motion.a>
+
                     <motion.a
-                      onClick={() => deleteId(project.id)}
+                      onClick={() => handleDelete(project.id)}
                       className="text-gray-400 hover:underline cursor-pointer rounded-lg shadow-lg transition duration-300 border border-black p-1 pl-6 pr-6"
                       whileHover={{ scale: 1.1 }}
                     >
                       DELETE
                     </motion.a>
+
                     <motion.a
                       href={`/edit/${project.id}`}
                       className="text-gray-400 hover:underline cursor-pointer rounded-lg shadow-lg transition duration-300 border border-black p-1 pl-6 pr-6"

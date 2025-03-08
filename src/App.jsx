@@ -8,11 +8,17 @@ import About from "./page/About";
 import Contact from "./page/Contact";
 import Add from "./page/add-project";
 import Edit from "./page/Edit";
+import NotFound from "./page/Notfound";
+import Login from "./page/Login";
 
 const RoutesConfig = [
   {
     path: "/",
     element: <Home />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
   },
   {
     path: "/projects",
@@ -27,10 +33,6 @@ const RoutesConfig = [
     element: <Edit />,
   },
   {
-    path: "/edit/:id",
-    element: <Edit />,
-  },
-  {
     path: "/contact",
     element: <Contact />,
   },
@@ -39,19 +41,33 @@ const RoutesConfig = [
     element: <About />,
   },
   {
-    path: "/",
-    element: <Home />,
+    path: "*",
+    element: <NotFound />,
   },
 ];
 function App() {
   const routes = useRoutes(RoutesConfig);
-  return (
-    <div className="bg-gray-900">
-      <Nav />
-      {routes}
-      <Footer />
-    </div>
-  );
+  if (window.location.pathname === "*") {
+    return (
+      <div className="bg-white">
+        <NotFound />
+      </div>
+    );
+  } else if (window.location.pathname === "/login") {
+    return (
+      <div className="bg-gray-900">
+        <Login />
+      </div>
+    );
+  } else {
+    return (
+      <div className="bg-gray-900">
+        <Nav />
+        {routes}
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default App;
