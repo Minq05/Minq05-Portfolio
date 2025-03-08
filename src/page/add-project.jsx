@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
+import useAuth from "../context/AuthContext";
 
 function Add() {
   const nav = useNavigate();
@@ -10,7 +11,7 @@ function Add() {
   const onSubmit = async (data) => {
     try {
       await axios.post("https://minq05-portfolio.onrender.com/projects", data);
-      toast.success("Project added successfully");
+      toast.success("Thêm dự án thành công !");
       nav("/projects");
     } catch (error) {
       console.log(error);

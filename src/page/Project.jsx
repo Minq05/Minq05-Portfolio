@@ -35,11 +35,32 @@ function Projects() {
           await axios.delete(
             `https://minq05-portfolio.onrender.com/projects/${id}`
           );
+          alert("Xóa thành công !");
           getProjects();
         } catch (error) {
           console.log(error);
         }
       }
+    }
+  };
+
+  const hanldeAdd = async () => {
+    if (!user || user.username !== "minq05") {
+      alert("Bạn không có quyền xóa dự án! Hãy đăng nhập !");
+      nav("/login");
+      return;
+    } else {
+      nav("/add");
+    }
+  };
+
+  const handleEdit = (id) => {
+    if (!user || user.username !== "minq05") {
+      alert("Bạn không có quyền chỉnh sửa dự án! Hãy đăng nhập!");
+      nav("/login");
+      return;
+    } else {
+      nav(`/edit/${id}`);
     }
   };
 
@@ -123,7 +144,7 @@ function Projects() {
                     </motion.a>
 
                     <motion.a
-                      href={`/edit/${project.id}`}
+                      onClick={() => handleEdit(project.id)}
                       className="text-gray-400 hover:underline cursor-pointer rounded-lg shadow-lg transition duration-300 border border-black p-1 pl-6 pr-6"
                       whileHover={{ scale: 1.1 }}
                     >
@@ -140,7 +161,7 @@ function Projects() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <a href="/add">
+          <a onClick={() => hanldeAdd()}>
             <h1>Thêm dự án</h1>
           </a>
         </motion.p>

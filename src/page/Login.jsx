@@ -14,6 +14,7 @@ function Login() {
     const success = await login(username, password);
 
     if (success) {
+      alert("Đăng nhập thành công !");
       navigate("/");
     } else {
       alert("Sai tài khoản hoặc mật khẩu!");
@@ -45,6 +46,9 @@ function Login() {
             <button class="btn" type="submit">
               Login
             </button>
+            <a href="/" className="view">
+              Chỉ xem
+            </a>
           </form>
         </div>
       </motion.div>

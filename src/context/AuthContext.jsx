@@ -11,6 +11,8 @@ export const AuthProvider = ({ children }) => {
     if (storedUser) {
       setUser(JSON.parse(storedUser));
     }
+    localStorage.removeItem("user");
+    setUser(null);
   }, []);
 
   const login = async (username, password) => {

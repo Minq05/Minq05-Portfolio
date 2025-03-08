@@ -30,7 +30,7 @@ function Edit() {
         `https://minq05-portfolio.onrender.com/projects/${id}`,
         data
       );
-      toast.success("Project updated successfully");
+      toast.success("Sửa thông tin dự án thành công !");
       nav("/projects");
     } catch (error) {
       console.log(error);

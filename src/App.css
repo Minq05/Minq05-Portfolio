@@ -56,3 +56,23 @@
     background-color: antiquewhite;
     box-shadow: none;
 }
+
+.view {
+    height: 3rem;
+    width: 20rem;
+    margin-top: 15px;
+    background-color: wheat;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1.2rem;
+    transition: all 400ms;
+    cursor: pointer;
+    box-shadow:
+        0 0 10px antiquewhite,
+        0 0 10px antiquewhite;
+        line-height: 3rem;
+}
+.view:hover {
+    background-color: antiquewhite;
+    box-shadow: none;
+}
