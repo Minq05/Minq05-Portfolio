@@ -10,6 +10,8 @@ import Add from "./page/add-project";
 import Edit from "./page/Edit";
 import NotFound from "./page/Notfound";
 import Login from "./page/Login";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const RoutesConfig = [
   {
@@ -45,29 +47,20 @@ const RoutesConfig = [
     element: <NotFound />,
   },
 ];
+
 function App() {
   const routes = useRoutes(RoutesConfig);
-  if (window.location.pathname === "*") {
-    return (
-      <div className="bg-white">
-        <NotFound />
-      </div>
-    );
-  } else if (window.location.pathname === "/login") {
-    return (
-      <div className="bg-gray-900">
-        <Login />
-      </div>
-    );
-  } else {
-    return (
-      <div className="bg-gray-900">
-        <Nav />
-        {routes}
-        <Footer />
-      </div>
-    );
-  }
+  const isLoginPage = window.location.pathname === "/login";
+
+  return (
+    <div className="bg-gray-900 min-h-screen">
+      {/* Hiển thị Nav và Footer trừ trang Login */}
+      {!isLoginPage && <Nav />}
+      {routes}
+      {!isLoginPage && <Footer />}
+      <ToastContainer />
+    </div>
+  );
 }
 
 export default App;

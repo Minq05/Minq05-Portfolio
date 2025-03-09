@@ -35,7 +35,7 @@ function Projects() {
           await axios.delete(
             `https://minq05-portfolio.onrender.com/projects/${id}`
           );
-          alert("Xóa thành công !");
+          alert("🎉 Xóa dự án thành công!");
           getProjects();
         } catch (error) {
           console.log(error);

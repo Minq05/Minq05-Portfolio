@@ -1,22 +1,24 @@
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router";
-import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { motion } from "framer-motion";
-import useAuth from "../context/AuthContext";
 
 function Add() {
   const nav = useNavigate();
   const { register, handleSubmit } = useForm();
+
   const onSubmit = async (data) => {
     try {
       await axios.post("https://minq05-portfolio.onrender.com/projects", data);
-      toast.success("Thêm dự án thành công !");
+      alert("🎉 Thêm dự án thành công!");
       nav("/projects");
     } catch (error) {
       console.log(error);
+      alert("❌ Có lỗi xảy ra khi thêm dự án!");
     }
   };
+
   return (
     <div className="min-h-screen p-6 flex flex-col items-center">
       <motion.div
@@ -24,8 +26,8 @@ function Add() {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.6 }}
       >
-        <div className=" bg-gray-800 p-10 rounded-xl shadow-lg max-w-lg w-auto">
-          <h1 className=" text-4xl font-serif font-extrabold text-white text-center mb-8">
+        <div className="bg-gray-800 p-10 rounded-xl shadow-lg max-w-lg w-auto">
+          <h1 className="text-4xl font-serif font-extrabold text-white text-center mb-8">
             Thêm dự án
           </h1>
           <form
@@ -65,7 +67,6 @@ function Add() {
                 rows={4}
                 placeholder="Enter project description"
                 {...register("description", { required: true })}
-                defaultValue={""}
               />
             </div>
             <div>
@@ -91,4 +92,5 @@ function Add() {
     </div>
   );
 }
+
 export default Add;

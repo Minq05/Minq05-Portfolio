@@ -2,7 +2,6 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate, useParams } from "react-router";
-import { toast } from "react-toastify";
 import { motion } from "framer-motion";
 
 function Edit() {
@@ -30,7 +29,7 @@ function Edit() {
         `https://minq05-portfolio.onrender.com/projects/${id}`,
         data
       );
-      toast.success("Sửa thông tin dự án thành công !");
+      alert("🎉 Sửa dự án thành công!");
       nav("/projects");
     } catch (error) {
       console.log(error);
