@@ -46,7 +46,7 @@ function Projects() {
 
   const hanldeAdd = async () => {
     if (!user || user.username !== "minq05") {
-      alert("Bạn không có quyền xóa dự án! Hãy đăng nhập !");
+      alert("Bạn không có quyền Thêm dự án! Hãy đăng nhập !");
       nav("/login");
       return;
     } else {
