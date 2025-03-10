@@ -19,7 +19,14 @@
       "image": "https://s3-alpha-sig.figma.com/img/2f8a/5103/8c5b311236920f7e65ee134c8ea9c640?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=QlTOG5Uyk8SPGODAHYQAQcXFZ1MVFRmhhHEUXRXS~3DYu65zfTB-GX4xzq905H93q~EJMJgBmkPoYZjYNs2qmOS01GqWp8ls7ANLR3etJ2B6s2ZzmWITsXHRDfyVRtPIW~U7vbx7rXlbwtw1AK9C2umm9vxa0xM1RiXjnLJ9Zj3I4Ph~bPnLg2X-5Q3S8HFNDU3d~KvH3XNCNChruab~Rc8GxTGFOKkdwS4qrPbWwyc9nEVxtQUQUx3nfPjcC2OsdBw~RUxBgG9v0EeEkJBPLUW40JBR7bSzWtjWcdu-YwxRxt24SLJVz1yQDnUgU2RURjiQVvlpBroLMdUEtGGKfQ__",
       "description": "Create QR Code App sử dụng HTML, ReactJs, Tailwind giúp người dùng dễ dàng tạo mã QR và tải về dạng hình ảnh. Bên cạnh đó người dùng có thể tùy chỉnh màu sắc, kích cỡ theo nhu cầu\n",
       "github": "https://github.com/Minq05/Minq05-Create-QR-code",
-      "id": "IedTLpI"
+      "id": "3"
+    },
+    {
+      "title": "TASK MANAGEMENT APP",
+      "image": "https://s3-alpha-sig.figma.com/img/6e41/8aaa/703d539858487fdcd61577c45049227c?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=QtxUEPAvs-XcGV9X8mulAdj1wwMJnkxF9-gpI9gOLL43cGCEmObYugsWm2zfAB-jiOWRlnnSt6KroC3Jh3~IbtFPRYjopN392d~TgNBR0yfNV5WuFIlJkmJ~e8JF5ovdjk9U4trO3mkXHyweVw6hP33SSxL7unukijQwzGsMPoi8yKUkVRm8TtoT6~lhSyepyySVcPyGpkOFhwFUpinLabAJ-rHOCVgLrvVnYuxTNAH0iaNbVUzvuPz2mpi5QBsZMXHUY6wOkNhvKmzwdtyVf6GfSjTuEagqvcP~n78sJdCr0mLyGZpiG9xtArhueYl2VDp3eHNk1a3P52DmFx25bQ__",
+      "description": "Dự án Task Management App được xây dựng bằng ReactJS (Vite) kết hợp Tailwind CSS (CDN) với giao diện hiện đại, hỗ trợ Dark Mode, Drag & Drop task, lọc theo trạng thái, tìm kiếm, sắp xếp theo thứ tự chữ cái, phân quyền và phân trang (Pagination). Dự án được triển khai hoàn chỉnh trên Netlify (frontend) và Render (backend).",
+      "github": "https://github.com/Minq05/Minq05-Portfolio",
+      "id": "4"
     }
   ],
   "auth": [
