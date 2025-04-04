@@ -5,6 +5,7 @@ const Nav = () => {
     <nav className="w-full text-white p-4 flex justify-between items-center">
       <div className="flex items-center">
         <div className="rounded-full overflow-hidden">
+          Khi truy cập sẽ mất vài phút để tải dữ liệu ! 
         </div>
       </div>
       <ul className="flex space-x-6 mr-6">
