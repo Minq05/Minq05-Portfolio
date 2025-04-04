@@ -13,7 +13,7 @@ function Home() {
         transition={{ duration: 0.6 }}
       >
         <img
-          src="https://imgur.com/a/CGk3R81"
+          src="https://plus.unsplash.com/premium_photo-1678566154673-a728037f3f00?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZ3JhbW1lcnxlbnwwfHwwfHx8MA%3D%3D"
           alt="Profile"
           className="w-full h-full object-cover"
         />

@@ -12,6 +12,7 @@ import NotFound from "./page/Notfound";
 import Login from "./page/Login";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ProjectDetail from "./page/ProjectDetail";
 
 const RoutesConfig = [
   {
@@ -25,6 +26,10 @@ const RoutesConfig = [
   {
     path: "/projects",
     element: <Projects />,
+  },
+  {
+    path: "/projects/:id",
+    element: <ProjectDetail />,
   },
   {
     path: "/add",

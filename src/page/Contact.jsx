@@ -45,6 +45,7 @@ function Contact() {
         setErrorMsg("Gửi thất bại, vui lòng thử lại sau.");
       }
     } catch (error) {
+      console.log(error);
       setErrorMsg("Lỗi mạng, vui lòng thử lại.");
     } finally {
       setIsLoading(false);
@@ -52,32 +53,32 @@ function Contact() {
   };
 
   return (
-    <div className="min-h-screen p-6 flex flex-col items-center">
+    <div className="min-h-screen p-6 bg-gray-900 flex flex-col items-center">
       <motion.div
-        className="min-h-screen bg-gray-900 p-6 flex flex-col items-center"
+        className="bg-gray-800 p-8 rounded-xl shadow-lg max-w-lg w-full"
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.6 }}
       >
-        <h1 className="text-4xl font-extrabold font-serif text-white mb-8">
-          Contact
+        <h1 className="text-4xl font-extrabold font-serif text-white text-center mb-8">
+          Liên hệ với tôi
         </h1>
 
         {isSubmitted ? (
-          <p className="text-green-400 text-lg font-semibold">
+          <p className="text-green-400 text-lg font-semibold text-center">
             🎉 Cảm ơn bạn đã liên hệ. Mình sẽ phản hồi sớm nhất!
           </p>
         ) : (
           <form
             onSubmit={handleSubmit}
-            className="bg-gray-800 p-6 w-400 rounded-lg shadow-md max-w-md"
+            className="bg-gray-700 p-6 rounded-lg shadow-lg space-y-6"
           >
             <div className="mb-4">
               <label
                 className="block text-white text-sm font-bold mb-2"
                 htmlFor="name"
               >
-                Name
+                Họ và tên
               </label>
               <input
                 type="text"
@@ -86,9 +87,10 @@ function Contact() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-white bg-gray-900 leading-tight focus:outline-none focus:shadow-outline hover:border-blue-500"
+                className="shadow appearance-none border rounded w-full py-3 px-4 text-white bg-gray-900 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-500 transition duration-300"
               />
             </div>
+
             <div className="mb-4">
               <label
                 className="block text-white text-sm font-bold mb-2"
@@ -103,15 +105,16 @@ function Contact() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-white bg-gray-900 leading-tight focus:outline-none focus:shadow-outline hover:border-blue-500"
+                className="shadow appearance-none border rounded w-full py-3 px-4 text-white bg-gray-900 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-500 transition duration-300"
               />
             </div>
+
             <div className="mb-4">
               <label
                 className="block text-white text-sm font-bold mb-2"
                 htmlFor="message"
               >
-                Message
+                Lời nhắn
               </label>
               <textarea
                 id="message"
@@ -120,17 +123,21 @@ function Contact() {
                 onChange={handleChange}
                 rows="4"
                 required
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-white bg-gray-900 leading-tight focus:outline-none focus:shadow-outline hover:border-blue-500"
+                className="shadow appearance-none border rounded w-full py-3 px-4 text-white bg-gray-900 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-500 transition duration-300"
               ></textarea>
             </div>
-            {errorMsg && <p className="text-red-400 mb-3">{errorMsg}</p>}
-            <div className="flex items-center justify-between">
+
+            {errorMsg && (
+              <p className="text-red-400 text-center font-semibold">{errorMsg}</p>
+            )}
+
+            <div className="flex items-center justify-center">
               <button
                 type="submit"
                 disabled={isLoading}
-                className="bg-black hover:bg-gray-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline"
+                className="bg-black hover:bg-gray-700 text-white font-bold py-3 px-8 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
               >
-                {isLoading ? "Đang gửi..." : "Send"}
+                {isLoading ? "Đang gửi..." : "Gửi"}
               </button>
             </div>
           </form>
