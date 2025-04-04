@@ -123,10 +123,7 @@ const About = () => {
               Kinh nghiệm với GitHub.
             </li>
             <li className="my-2 mx-3  hover:text-gray-400 cursor-pointer">
-              Kinh nghiệm với GitHub.
-            </li>
-            <li className="my-2 mx-3  hover:text-gray-400 cursor-pointer">
-              PHP, Cơ sở dữ liệu (SQL) UI/UX Design
+              PHP, Cơ sở dữ liệu (SQL) UI/UX Design Cơ bản 
             </li>
             <li className="my-2 mx-3  hover:text-gray-400 cursor-pointer">
               Quản trị Website HTML, CSS, JavaScript, TypeScript, ECMAScript
