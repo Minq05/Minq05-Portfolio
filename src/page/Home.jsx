@@ -13,7 +13,7 @@ function Home() {
         transition={{ duration: 0.6 }}
       >
         <img
-          src="https://s3-alpha-sig.figma.com/img/e0bc/d952/9223dd88370f513c63e1d998868a2953?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=RkCyMXBPLlUDMUMG~HQ4lagUZ5PT3kYFkv7QUrZmbuKObo4uBHzaX5qqai4nnvz2EPrQ-dl2XOlY0oPGIBEkYfR5oU01sXBD959LIH5GFeSDgc8h5Arxtuh-XG4iRFYmsi3QEGsFN8UND0bPVaBY3WjBYGa-TuGdeJ2xGSu-RjZTF1JFqqmE~2KHbqB0DWexrYPI1XLenUO~hbsZSxSfySQTHpZIq17dOPmskFJFEI6sWR-8R2IA-WJlAhegSL7HMbkenTO98g4ebVwr~SNcJMKCSI8eUVfX6hlgO~-sJtowz4GgZMB6u8cJI-MHvKf0qZ9zz144t4XABfYvyl6ADQ__"
+          src="https://scontent.fhan2-5.fna.fbcdn.net/v/t39.30808-6/474735078_1128456305479619_3483514243009613125_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=106&ccb=1-7&_nc_sid=fe5ecc&_nc_eui2=AeFTy7B5Hox-Pp4d0dVF8vhZrRQU-tt9nwStFBT6232fBAFuknKofAJXbfSUPuBjYy6SXZZGIELGEqEfV47rx6eh&_nc_ohc=8z_DANN6gM4Q7kNvwHswM6g&_nc_oc=AdkjxLB4ohI6k1Gt6D-0YfWBXFgjIsuTZUi50WDNucPYBW1GXilmsRAUzSsGdA5byCY&_nc_zt=23&_nc_ht=scontent.fhan2-5.fna&_nc_gid=fqucfQ4XKxdkZ0TqwtjUAw&oh=00_AYFduikeMm8aEAM3AlbFtHvA1-51D5mseNj7EnR4J-1QCQ&oe=67F58955"
           alt="Profile"
           className="w-full h-full object-cover"
         />
