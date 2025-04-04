@@ -13,7 +13,7 @@ function Home() {
         transition={{ duration: 0.6 }}
       >
         <img
-          src="https://scontent.fhan2-5.fna.fbcdn.net/v/t39.30808-6/474735078_1128456305479619_3483514243009613125_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=106&ccb=1-7&_nc_sid=fe5ecc&_nc_eui2=AeFTy7B5Hox-Pp4d0dVF8vhZrRQU-tt9nwStFBT6232fBAFuknKofAJXbfSUPuBjYy6SXZZGIELGEqEfV47rx6eh&_nc_ohc=8z_DANN6gM4Q7kNvwHswM6g&_nc_oc=AdkjxLB4ohI6k1Gt6D-0YfWBXFgjIsuTZUi50WDNucPYBW1GXilmsRAUzSsGdA5byCY&_nc_zt=23&_nc_ht=scontent.fhan2-5.fna&_nc_gid=fqucfQ4XKxdkZ0TqwtjUAw&oh=00_AYFduikeMm8aEAM3AlbFtHvA1-51D5mseNj7EnR4J-1QCQ&oe=67F58955"
+          src="https://imgur.com/a/CGk3R81"
           alt="Profile"
           className="w-full h-full object-cover"
         />
