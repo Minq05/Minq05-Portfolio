@@ -48,7 +48,7 @@ function Home() {
         </a>
         <a href="https://drive.google.com/file/d/1p7gW0JInyP-tQn2Tu_jbuHvKHC7lJL2H/view?usp=sharing">
           <button
-            className="mt-6 px-6 py-3 border-2 border-white rounded-lg text-white font-semibold transition-all transform hover:scale-110 float-left cursor-pointer"
+            className="mt-6 px-6 py-3 border-2 ml-10 border-white rounded-lg text-white font-semibold transition-all transform hover:scale-110 float-left cursor-pointer"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
             style={{ transform: hovered ? "scale(1.1)" : "scale(1)" }}
